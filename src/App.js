@@ -8,7 +8,7 @@ function App(){
 const [query, setquery] = useState(" ");
 const [recipes, setrecipes] = useState([ ])
 
-var url = `https://api.edamam.com/api/recipes/v2?type=public&q=chicken&app_id=46105c59&app_key=e1962ed25b4e1cec6660d6421a5a4a86`;
+var url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=46105c59&app_key=e1962ed25b4e1cec6660d6421a5a4a86`;
 
 async function getRecipes(){
 var result =  await Axios.get(url);
